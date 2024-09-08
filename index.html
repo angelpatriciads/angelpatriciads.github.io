@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <style>
         .card {
@@ -61,6 +62,53 @@
             margin-top: 10px;
         }
 
+        #contact .contact-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#contact .contact-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/mail.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -2;
+}
+
+#contact .contact-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0d6efd; 
+  opacity: 0.8;
+  z-index: -1;
+}
+
+#contact .contact-content {
+  position: relative;
+  z-index: 2;
+}
+
+#contact a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+#contact a:hover {
+  opacity: 0.6;
+}
+
         footer {
         background-color: #f8f9fa;
         padding: 2rem 0;
@@ -99,6 +147,8 @@
         font-size: 0.9rem;
         color: #6c757d;
       }
+
+      
     </style>
   </head>
   <body>
@@ -126,10 +176,13 @@
               <a class="nav-link" href="#collaboration-projects">Collaboration</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#other-projects">Data Sciences</a>
+              <a class="nav-link" href="#data-sciences-project">Data Sciences</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#artificial-intelligence-project">Articial Intelligence</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Info</a>
             </li>
           </ul>
         </div>
@@ -152,18 +205,17 @@
                 enables me to extract meaningful value from data, paving the way
                 for innovative solutions and advancements in AI-driven
                 analytics. By using these powerful tools, I aim to drive
-                impactful decision-making in industry.
+                impactful decision-making in industry. Lastly, <b style="font-weight: bold;">I am a FLASK lover.</b>
               </p>
               <div>
-                <a href="#" class="btn btn-dark btn-lg me-3">Contact Info</a>
-                <a href="#" class="btn btn-primary btn-lg">Download CV</a>
+                <a href="#contact" class="btn btn-dark btn-lg me-3">Contact Info</a>
+                <a href="/files/CV_Angelica Patricia Djaya Saputra.pdf" class="btn btn-primary btn-lg" target="_blank">Download CV</a>
               </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
               <div class="profile-image-container">
-                <!-- Replace with your actual image -->
                 <img
-                  src="your-image.jpg"
+                  src="images/profile.jpg"
                   alt="Angelica"
                   class="img-fluid rounded-circle"
                 />
@@ -175,15 +227,16 @@
 
       <section id="collaboration-projects">
         <div class="container mt-5 bg-light p-5" style="border-radius: 25px;">
-            <h2 class="text-center mb-4">Collaboration Projects</h2>
-            <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod enim eget elit rhoncus consequat. Vestibulum tincidunt lobortis sapien, eu cursus diam aliquet sit amet.</p>
+            <h2 class="text-center mb-3">My Collaboration Projects</h2>
+            <p class="text-center mb-4">As a full-stack developer, I've partnered with various events and companies to create comprehensive web solutions. These collaborations showcase my expertise in developing end-to-end applications using Flask and Python, encompassing backend, frontend, database, system architecture, and AI integration.
+            </p>
             
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                 <div class="col">
                     <div class="card" style="background-image: url('/images/gudang-garam.png');">
                         <div class="card-body d-flex flex-column justify-content-end">
                             <h5 class="card-title">AI Face Swap</h5>
-                            <h6 class="card-subtitle mb-2">Gudang Garam</h6>
+                            <h6 class="card-subtitle mb-2">Gudang Garam International</h6>
                             <p class="card-text">Forestra'24</p>
                         </div>
                     </div>
@@ -192,7 +245,7 @@
                     <div class="card" style="background-image: url('/images/ruang-guru.png');">
                         <div class="card-body d-flex flex-column justify-content-end">
                             <h5 class="card-title">Attendance System</h5>
-                            <h6 class="card-subtitle mb-2">Scholars by Ruangguru</h6>
+                            <h6 class="card-subtitle mb-2">Schoters by Ruangguru</h6>
                             <p class="card-text">Study and Work Abroad Festival</p>
                         </div>
                     </div>
@@ -245,10 +298,10 @@
                   <span class="tag">Regression</span>
                 </div>
                 <p class="project-description">
-                  This work received support from the PUTI Q1 Research Grant
-                  2023 provided by Universitas Indonesia. The grant has played a
-                  vital role in facilitating and advancing our research with
-                  contact number:NKB-352/UN2.RST/HKP.05.00/2023.
+                  Used Support Vector Regression and Klemera-and-Doubal Method for biological age modeling from clinical biomarkers. Conducted
+                  multicollinearity and feature selection analyses, evaluating model performance with RMSE and R-squared metrics. Supported by
+                  PUTI Q1 Research Grant, Universitas Indonesia. This work received support from the PUTI Q1 Research Grant 2023 provided by
+                  Universitas Indonesia.
                 </p>
               </div>
             </div>
@@ -277,8 +330,7 @@
                   <span class="tag">OpenCV</span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
-                </p>
+                  A Convolutional Neural Network, employing the VGG-19 architecture, is applied to detect Retinopathy of Prematurity (ROP) in premature infants, with emphasis on assessing the impact of data augmentation on model performance. The study involves comprehensive data preparation, including augmentation, labeling, and preprocessing of retinal images, followed by model training and evaluation to determine the most effective approach for ROP detection. </p>
               </div>
             </div>
           </div>
@@ -303,8 +355,7 @@
                   <span class="tag">Scikit-Learn</span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
-                </p>
+                  This project evaluates and compares the performance of three machine learning models - Decision Tree, Logistic Regression, and Support Vector Machine - for credit scoring in lending businesses, with a focus on predicting loan repayment. The Decision Tree model emerged as the best performer, achieving an F1-score of 94%, and the study concludes by highlighting key factors for determining credit eligibility, including annual income, loan class, interest rate, and default history.</p>
               </div>
             </div>
           </div>
@@ -325,7 +376,7 @@
                   <span class="tag">Support Vector Machines</span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
+                  This project focuses on analyzing DNA methylation profiles in Acute Myeloid Leukemia (AML) and Acute Lymphoblastic Leukemia (ALL) using datasets from genome-wide studies. The methodology involves combining and preprocessing the data, applying dimensionality reduction through Principal Component Analysis, and then employing a Support Vector Machines Classifier for machine learning, with the model's performance evaluated using ROC AUC.
                 </p>
               </div>
             </div>
@@ -347,7 +398,7 @@
                   <span class="tag">Artificial Neural Network</span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
+                  A deep neural network is developed to classify mushroom characteristics, employing hyperparameter tuning to optimize the model's performance in identifying potentially toxic mushrooms. The project encompasses comprehensive data analysis, preprocessing, and feature selection, culminating in a highly accurate model with 99% accuracy and an F1-score of 1.00, while also pinpointing key features strongly associated with mushroom toxicity.
                 </p>
               </div>
             </div>
@@ -362,7 +413,7 @@
           <div class="project-card">
             <div class="row">
               <div class="col-md-3 ">
-                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+                <div class="project-image" style="background-image: url('/images/surveillance.jpg');"></div>
               </div>
               <div class="col-md-8">
                 <h3 class="project-title">
@@ -378,10 +429,7 @@
                   <span class="tag">Face Identification</span>
                 </div>
                 <p class="project-description">
-                  This work received support from the PUTI Q1 Research Grant
-                  2023 provided by Universitas Indonesia. The grant has played a
-                  vital role in facilitating and advancing our research with
-                  contact number:NKB-352/UN2.RST/HKP.05.00/2023.
+                  This project implements a comprehensive surveillance system using advanced computer vision techniques, combining YOLOv8 for object detection and tracking, Supervision for object counting, and MTCNN with FaceNet for face recognition and identification. The system addresses the challenges of Multiple Object Tracking (MOT) in complex scenarios, offering robust solutions for object localization, identity maintenance, and trajectory tracking across video frames, while also incorporating sophisticated face recognition capabilities to enhance surveillance and identification tasks.
                 </p>
               </div>
             </div>
@@ -392,22 +440,24 @@
           <div class="project-card">
             <div class="row">
               <div class="col-md-3">
-                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+                <div class="project-image" style="background-image: url('/images/idp.png');"></div>
               </div>
               <div class="col-md-8">
                 <h3 class="project-title">
-                    Comparison in Invoice OCR using YOLOv8 for Object Detection and PaddleOCR                </h2>
+                  Intelligent Document Processing (IDP) for Banking Document: Bank Statement, Financial Statement, and Trade Finance </h2>
                 <div>
-                  <span class="tag">Computer Vision</span>
-                  <span class="tag">Supervision</span>
+                  <span class="tag">Intelligent Document Processing</span>
+                  <span class="tag">Optical Character Recognition</span>
+                  <span class="tag">Natural Language Processing</span>
+                  <span class="tag">PaddleOCR</span>
+                  <span class="tag">Tesseract OCR</span>
+                  <span class="tag">EasyOCR</span>
+                  <span class="tag">Large Language Models</span>
+                  <span class="tag">Generative Pre-trained Transformer</span>
                   <span class="tag">YOLOv8</span>
-                  <span class="tag">MTCNN</span>
-                  <span class="tag">FaceNet</span>
-                  <span class="tag">Face Recognition</span>
-                  <span class="tag">Face Identification</span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
+                  Intelligent Document Processing (IDP) leverages advanced technologies like OCR, NLP, and machine learning to automate the extraction, analysis, and understanding of information from complex banking documents such as bank statements, financial statements, and trade finance records. This project employs a combination of state-of-the-art tools including PaddleOCR, Tesseract, EasyOCR, large language models, GPT, and YOLOv8 to create a robust system capable of efficiently processing and interpreting diverse financial documents, potentially revolutionizing document handling in the banking sector.
                 </p>
               </div>
             </div>
@@ -418,22 +468,25 @@
           <div class="project-card">
             <div class="row">
               <div class="col-md-3">
-                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+                <div class="project-image" style="background-image: url('/images/facepass.jpg');"></div>
               </div>
               <div class="col-md-8">
                 <h3 class="project-title">
-                    Face Analysis                </h2>
+                  Biometric Access Control with Real-Time Face Recognition and Face Comparison using Landmark Facial Embeddings</h2>
                 <div>
                   <span class="tag">Computer Vision</span>
-                  <span class="tag">Supervision</span>
-                  <span class="tag">YOLOv8</span>
+                  <span class="tag">Face Recognition</span>
+                  <span class="tag">Face Comparison</span>
                   <span class="tag">MTCNN</span>
                   <span class="tag">FaceNet</span>
-                  <span class="tag">Face Recognition</span>
-                  <span class="tag">Face Identification</span>
+                  <span class="tag">Dlib</span>
+                  <span class="tag">Facial Embedding</span>
+                  <span class="tag">Real-time Verification</span>
+                  <span class="tag">Biometric Access Control
+                  </span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
+                  FacePass is an innovative web application that combines advanced AI technologies like MTCNN, FaceNet, and computer vision to provide secure and efficient event access control through real-time face recognition. The system streamlines the event check-in process by integrating QR code scanning with facial comparison, ensuring that only registered participants gain entry while effectively preventing unauthorized access.
                 </p>
               </div>
             </div>
@@ -445,11 +498,11 @@
           <div class="project-card">
             <div class="row">
               <div class="col-md-3">
-                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+                <div class="project-image" style="background-image: url('/images/tasks-recommendation.png');"></div>
               </div>
               <div class="col-md-8">
                 <h3 class="project-title">
-                    Event Task Recommendation System Using Text Analysis
+                  NLP-Driven Task Recommendation Engine for Event Planning using TF-IDF
                 </h2>
                 <div>
                   <span class="tag">NLTK</span>
@@ -457,9 +510,10 @@
                   <span class="tag">Lemmatization</span>
                   <span class="tag">TF-IDF Vectorization</span>
                   <span class="tag">Jaccard Similarity</span>
+                  <span class="tag">Cosine Similarity</span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
+                  This project implements a sophisticated Natural Language Processing (NLP) system that generates tailored task recommendations for event planners based on company profiles and event objectives. Leveraging advanced text processing techniques including tokenization, lemmatization, TF-IDF vectorization, and Jaccard similarity calculations, the engine analyzes textual inputs to produce highly relevant and context-specific task suggestions, enhancing the efficiency and effectiveness of event planning processes.
                 </p>
               </div>
             </div>
@@ -469,7 +523,7 @@
           <div class="project-card">
             <div class="row">
               <div class="col-md-3">
-                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+                <div class="project-image" style="background-image: url('/images/pose.jpg');"></div>
               </div>
               <div class="col-md-8">
                 <h3 class="project-title">
@@ -481,11 +535,13 @@
                   <span class="tag">OpenCV</span>
                   <span class="tag">OpenPose</span>
                   <span class="tag">PoseNet</span>
+                  <span class="tag">Keypoint Detection
+                  </span>
 
 
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
+                  This project implements a computer vision system for pose estimation and comparison using MoveNet MultiPose Lightning, integrated with TensorFlow and OpenCV. The system processes images from both event organizers and participants, extracts 17 key body landmarks, and calculates a detailed similarity score based on keypoint positions, enabling precise pose matching for applications like virtual event participation or fitness instruction verification.
                 </p>
               </div>
             </div>
@@ -495,20 +551,61 @@
           <div class="project-card">
             <div class="row">
               <div class="col-md-3">
-                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+                <div class="project-image" style="background-image: url('/images/face-analyzer.png');"></div>
               </div>
               <div class="col-md-8">
                 <h3 class="project-title">
-                    Mushroom Characteristic Classification using Artificial Neural Network (ANN) with Multilayer Perceptron (MLP) Architecture</h2>
+                  Facial Analysis System for Eyewear Fitting using MediaPipe and Inception V3</h2>
                 <div>
-                  <span class="tag">Scikit-Learn</span>
-                  <span class="tag">Keras</span>
-                  <span class="tag">Multilayer Perceptron</span>
-                  <span class="tag">Artificial Neural Network</span>
+                  <span class="tag">Facial Analysis
+                  </span>
+                  <span class="tag">MediaPipe Face Landmarker</span>
+                  <span class="tag">Inception V3 Architecture
+                  </span>
+                  <span class="tag">3D Facial Landmarks</span>
+                  <span class="tag">Face Shape Classification
+                  </span>
+                  <span class="tag">Gender Classification</span>
+                  <span class="tag">Geometric Face Measurements
+                  </span>
                 </div>
                 <p class="project-description">
-                  Description of the project goes here.
+                  This  facial analysis system employs MediaPipe for precise 3D facial landmark detection and geometric calculations, combined with Inception V3 architecture for face shape and gender classification. The system provides comprehensive facial measurements and shape analysis, enabling personalized eyewear recommendations and virtual try-on experiences, while also offering capabilities for facial expression recognition and avatar creation.
+
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-4 mb-md-0">
+              <div class="contact-bg text-white p-4 rounded d-flex flex-row align-items-center">
+                <div class="contact-content d-flex flex-row align-items-center w-100">
+                  <img
+                    src="images/mail.png"
+                    alt="Angelica"
+                    class="img-fluid rounded-circle w-25"
+                  />
+                  <div class="d-flex flex-column ms-4">
+                    <h3 class="mb-3">Contact Information</h3>
+                    <div class="d-flex mb-2">
+                      <i class="fab fa-linkedin me-3 mt-1"></i>
+                      <a href="https://www.linkedin.com/in/angelica-patricia" target="_blank">linkedin.com/in/angelica-patricia</a>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <i class="fas fa-envelope me-3 mt-1"></i>
+                      <a href="mailto:angelpatriciads@gmail.com" target="_blank">angelpatriciads@gmail.com</a>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <i class="fab fa-github me-3 mt-1"></i>
+                      <a href="https://github.com/angelpatriciads" target="_blank">github.com/angelpatriciads</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
