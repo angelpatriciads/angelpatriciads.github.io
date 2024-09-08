@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angelica - Data Scientist & AI Enthusiast</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .card {
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            transition: transform 0.3s;
+            border-radius: 20px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            border-radius: 20px;
+
+        }
+        .card-body {
+            background: rgba(0,0,0,0.5);
+            height: 100%;
+            border-radius: 20px;
+
+        }
+        .project-card {
+            margin-bottom: 20px;
+        }
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: top;
+            border-radius: 10px;
+        }
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .tag {
+            background-color: #0d6efd;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .project-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        footer {
+        background-color: #f8f9fa;
+        padding: 2rem 0;
+      }
+      
+      .skills-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      .skill-category {
+        flex: 0 0 auto;
+        margin-bottom: 1.5rem;
+      }
+      
+      .skill-category h5 {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+      
+      .skill-category ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .skill-category li {
+        margin-bottom: 0.25rem;
+        font-size: 0.8rem;
+
+      }
+      
+      .copyright {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home"
+          ><b class="text-primary">ANGEL</b>PATRICIA</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">About</a></li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#collaboration-projects">Collaboration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#other-projects">Data Sciences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section id="home">
+        <div class="container-fluid">
+          <div class="row min-vh-100 align-items-center">
+            <div class="col-lg-6 p-5">
+              <h2 class="display-5 fw-bold mb-1">
+                I'm <span class="text-primary">Angelica</span>
+              </h2>
+              <h3 class="h5 mb-4">
+                Data Scientist | AI/ML Engineer | Full Stack Engineer
+              </h3>
+              <p class="lead mb-5">
+                My expertise in blending mathematics, IT, and business insights
+                enables me to extract meaningful value from data, paving the way
+                for innovative solutions and advancements in AI-driven
+                analytics. By using these powerful tools, I aim to drive
+                impactful decision-making in industry.
+              </p>
+              <div>
+                <a href="#" class="btn btn-dark btn-lg me-3">Contact Info</a>
+                <a href="#" class="btn btn-primary btn-lg">Download CV</a>
+              </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+              <div class="profile-image-container">
+                <!-- Replace with your actual image -->
+                <img
+                  src="your-image.jpg"
+                  alt="Angelica"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collaboration-projects">
+        <div class="container mt-5 bg-light p-5" style="border-radius: 25px;">
+            <h2 class="text-center mb-4">Collaboration Projects</h2>
+            <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod enim eget elit rhoncus consequat. Vestibulum tincidunt lobortis sapien, eu cursus diam aliquet sit amet.</p>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card" style="background-image: url('/images/gudang-garam.png');">
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <h5 class="card-title">AI Face Swap</h5>
+                            <h6 class="card-subtitle mb-2">Gudang Garam</h6>
+                            <p class="card-text">Forestra'24</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="background-image: url('/images/ruang-guru.png');">
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <h5 class="card-title">Attendance System</h5>
+                            <h6 class="card-subtitle mb-2">Scholars by Ruangguru</h6>
+                            <p class="card-text">Study and Work Abroad Festival</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="background-image: url('/images/eye-soul.png');">
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <h5 class="card-title">Glasses Virtual Try On</h5>
+                            <h6 class="card-subtitle mb-2">Eyesoul Kawan Lama</h6>
+                            <p class="card-text">Living World Alam Sutera</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="background-image: url('/images/amo.png');">
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <h5 class="card-title">AI Mascot Chatbot</h5>
+                            <h6 class="card-subtitle mb-2">AMO Nabati</h6>
+                            <p class="card-text">Interactive AI Assistant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="data-sciences-project">
+        <div class="container mt-5">
+          <h2 class="mb-4">Data Sciences Projects</h1>
+
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3 ">
+                <div class="project-image" style="background-image: url('/images/biological-age.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                  Exploring Biological Age Models Prediction with Clinical
+                  Biomarkers using Support Vector Regression and
+                  Klemera-and-Doubal Method
+                </h2>
+                <div>
+                  <span class="tag">Prediction</span>
+                  <span class="tag">Statistical Method</span>
+                  <span class="tag">Klemera-and-Doubal</span>
+                  <span class="tag">Machine Learning</span>
+                  <span class="tag">Support Vector Regression</span>
+                  <span class="tag">SciPy</span>
+                  <span class="tag">Scikit-Learn</span>
+                  <span class="tag">Regression</span>
+                </div>
+                <p class="project-description">
+                  This work received support from the PUTI Q1 Research Grant
+                  2023 provided by Universitas Indonesia. The grant has played a
+                  vital role in facilitating and advancing our research with
+                  contact number:NKB-352/UN2.RST/HKP.05.00/2023.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/retinopathy.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                  Detecting Retinopathy of Prematurity Disease in Premature Baby
+                  Based on Fundus Image Data with CNN Model using VGG19's
+                  Architecture
+                </h2>
+                <div>
+                  <span class="tag">Image Classification</span>
+                  <span class="tag">Deep Learning</span>
+                  <span class="tag">Convolutional Neural Network</span>
+                  <span class="tag">VGG-19 Architecture</span>
+                  <span class="tag">Keras</span>
+                  <span class="tag">TensorFlow</span>
+                  <span class="tag">OpenCV</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr/>
+
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/credit-submission.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Credit Submission Detectors using Logistic Regression, Support Vector Machines, and Decision Tree
+                </h2>
+                <div>
+                  <span class="tag">Supervised Learning</span>
+                  <span class="tag">Pearson Correlation</span>
+                  <span class="tag">Logistic Regression</span>
+                  <span class="tag">Support Vector Machines</span>
+                  <span class="tag">Decision Tree</span>
+                  <span class="tag">Scikit-Learn</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr/>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/gene.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Analysis of Gene Expression Detection in Classifying Types of Cancer: Acute Myeloid Leukemia (AML) and Acute Lymphoblastic Leukemia (ALL) using PCA and Support Vector Machine (SVM)</h2>
+                <div>
+                  <span class="tag">GEOparse</span>
+                  <span class="tag">Scipy</span>
+                  <span class="tag">Principal Component Analysis</span>
+                  <span class="tag">Support Vector Machines</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr/>
+          
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/mushroom.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Mushroom Characteristic Classification using Artificial Neural Network (ANN) with Multilayer Perceptron (MLP) Architecture</h2>
+                <div>
+                  <span class="tag">Scikit-Learn</span>
+                  <span class="tag">Keras</span>
+                  <span class="tag">Multilayer Perceptron</span>
+                  <span class="tag">Artificial Neural Network</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="artificial-intelligence-project">
+        <div class="container mt-5">
+          <h2 class="mb-4">Artificial Intelligence Projects</h1>
+
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3 ">
+                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Surveillance Tracking using YOLOv8, Counting using Supervision, and Recognizing using MTCNN and FaceNet
+                </h2>
+                <div>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Supervision</span>
+                  <span class="tag">YOLOv8</span>
+                  <span class="tag">MTCNN</span>
+                  <span class="tag">FaceNet</span>
+                  <span class="tag">Face Recognition</span>
+                  <span class="tag">Face Identification</span>
+                </div>
+                <p class="project-description">
+                  This work received support from the PUTI Q1 Research Grant
+                  2023 provided by Universitas Indonesia. The grant has played a
+                  vital role in facilitating and advancing our research with
+                  contact number:NKB-352/UN2.RST/HKP.05.00/2023.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Comparison in Invoice OCR using YOLOv8 for Object Detection and PaddleOCR                </h2>
+                <div>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Supervision</span>
+                  <span class="tag">YOLOv8</span>
+                  <span class="tag">MTCNN</span>
+                  <span class="tag">FaceNet</span>
+                  <span class="tag">Face Recognition</span>
+                  <span class="tag">Face Identification</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Face Analysis                </h2>
+                <div>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Supervision</span>
+                  <span class="tag">YOLOv8</span>
+                  <span class="tag">MTCNN</span>
+                  <span class="tag">FaceNet</span>
+                  <span class="tag">Face Recognition</span>
+                  <span class="tag">Face Identification</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr/>
+          
+
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Event Task Recommendation System Using Text Analysis
+                </h2>
+                <div>
+                  <span class="tag">NLTK</span>
+                  <span class="tag">Tokenization</span>
+                  <span class="tag">Lemmatization</span>
+                  <span class="tag">TF-IDF Vectorization</span>
+                  <span class="tag">Jaccard Similarity</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr/>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Poses Comparison between Two Photos using Movenet Multipose Lightning</h2>
+                <div>
+                  <span class="tag">Movenet</span>
+                  <span class="tag">Multipose Lightning</span>
+                  <span class="tag">TensorFlow</span>
+                  <span class="tag">OpenCV</span>
+                  <span class="tag">OpenPose</span>
+                  <span class="tag">PoseNet</span>
+
+
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr/>
+          
+          <div class="project-card">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="project-image" style="background-image: url('/images/amo.png');"></div>
+              </div>
+              <div class="col-md-8">
+                <h3 class="project-title">
+                    Mushroom Characteristic Classification using Artificial Neural Network (ANN) with Multilayer Perceptron (MLP) Architecture</h2>
+                <div>
+                  <span class="tag">Scikit-Learn</span>
+                  <span class="tag">Keras</span>
+                  <span class="tag">Multilayer Perceptron</span>
+                  <span class="tag">Artificial Neural Network</span>
+                </div>
+                <p class="project-description">
+                  Description of the project goes here.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+          <h2 class="text-center mb-4">Skills</h2>
+          <div class="skills-section">
+            <div class="skill-category">
+              <h5>Data Analysis & Machine Learning</h5>
+              <ul>
+                <li>SciPy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Scikit-Learn</li>
+                <li>TensorFlow</li>
+                <li>Keras</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h5>Computer Vision</h5>
+              <ul>
+                <li>OpenCV</li>
+                <li>YOLO</li>
+                <li>Supervision</li>
+                <li>MediaPipe</li>
+                <li>MTCNN</li>
+                <li>DeepFace</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h5>DevOps</h5>
+              <ul>
+                <li>Flask</li>
+                <li>Docker</li>
+                <li>Docker Compose</li>
+                <li>Nginx</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h5>Data Management & Querying</h5>
+              <ul>
+                <li>Excel</li>
+                <li>Google BigQuery</li>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h5>Data Visualization & BI Tools</h5>
+              <ul>
+                <li>Tableau</li>
+                <li>Looker Studio</li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+          <p class="copyright">© 2024 Angelica Patricia. All rights reserved.</p>
+        </div>
+      </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
