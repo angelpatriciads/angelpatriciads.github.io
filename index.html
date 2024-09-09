@@ -12,26 +12,35 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
-    <style>
+     <style>
+        body {
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
         .card {
-            height: 450px;
+            height: 300px;
             background-size: cover;
             background-position: center;
             color: white;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
             transition: transform 0.3s;
             border-radius: 20px;
+            margin-bottom: 20px;
         }
         .card:hover {
             transform: scale(1.05);
-            border-radius: 20px;
-
         }
         .card-body {
             background: rgba(0,0,0,0.5);
             height: 100%;
             border-radius: 20px;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
         }
         .project-card {
             margin-bottom: 20px;
@@ -41,6 +50,7 @@
             background-size: cover;
             background-position: top;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
         .project-title {
             font-size: 1.2rem;
@@ -61,94 +71,111 @@
             color: #6c757d;
             margin-top: 10px;
         }
-
         #contact .contact-bg {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-#contact .contact-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('images/mail.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
-  z-index: -2;
-}
-
-#contact .contact-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #0d6efd; 
-  opacity: 0.8;
-  z-index: -1;
-}
-
-#contact .contact-content {
-  position: relative;
-  z-index: 2;
-}
-
-#contact a {
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-#contact a:hover {
-  opacity: 0.6;
-}
-
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        #contact .contact-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/mail.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: -2;
+        }
+        #contact .contact-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #0d6efd; 
+            opacity: 0.8;
+            z-index: -1;
+        }
+        #contact .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+        #contact a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        #contact a:hover {
+            opacity: 0.6;
+        }
         footer {
-        background-color: #f8f9fa;
-        padding: 2rem 0;
-      }
-      
-      .skills-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      
-      .skill-category {
-        flex: 0 0 auto;
-        margin-bottom: 1.5rem;
-      }
-      
-      .skill-category h5 {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-      }
-      
-      .skill-category ul {
-        list-style-type: none;
-        padding-left: 0;
-      }
-      
-      .skill-category li {
-        margin-bottom: 0.25rem;
-        font-size: 0.8rem;
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+        }
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skill-category {
+            flex: 0 0 auto;
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+        @media (min-width: 576px) {
+            .skill-category {
+                width: 48%;
+            }
+        }
+        @media (min-width: 992px) {
+            .skill-category {
+                width: 30%;
+            }
+        }
+        .skill-category h5 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        .skill-category ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .skill-category li {
+            margin-bottom: 0.25rem;
+            font-size: 0.8rem;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
 
-      }
-      
-      .copyright {
-        text-align: center;
-        margin-top: 2rem;
-        font-size: 0.9rem;
-        color: #6c757d;
-      }
+        @media (max-width: 992px) {
+          #mail {
+            display: none;
+          }
 
-      
+          .lead {
+            font-size: 1rem;
+          }
+
+          #contactInformation {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+          }
+          .skill-category h5 {
+            text-align: center;
+        }
+          .skill-category ul {
+            text-align: center;
+        }
+        }
     </style>
   </head>
   <body>
@@ -194,13 +221,13 @@
         <div class="container-fluid">
           <div class="row min-vh-100 align-items-center">
             <div class="col-lg-6 p-5">
-              <h2 class="display-5 fw-bold mb-1">
-                I'm <span class="text-primary">Angelica</span>
+              <h2 class="display-5 fw-bold mb-1 mt-4">
+                I am <span class="text-primary">Angelica</span>
               </h2>
               <h3 class="h5 mb-4">
-                Data Scientist | AI/ML Engineer | Full Stack Engineer
+                Data Scientist & Artificial Intelligence Engineer
               </h3>
-              <p class="lead mb-5">
+              <p class="lead mb-4">
                 My expertise in blending mathematics, IT, and business insights
                 enables me to extract meaningful value from data, paving the way
                 for innovative solutions and advancements in AI-driven
@@ -208,8 +235,8 @@
                 impactful decision-making in industry. Lastly, <b style="font-weight: bold;">I am a FLASK lover.</b>
               </p>
               <div>
-                <a href="#contact" class="btn btn-dark btn-lg me-3">Contact Info</a>
-                <a href="/files/CV_Angelica Patricia Djaya Saputra.pdf" class="btn btn-primary btn-lg" target="_blank">Download CV</a>
+                <a href="#contact" class="btn btn-dark btn-md mb-2">Contact Info</a>
+                <a href="/files/CV_Angelica Patricia Djaya Saputra.pdf" class="btn btn-primary btn-md mb-2" target="_blank">Download CV</a>
               </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
@@ -584,8 +611,9 @@
           <div class="row">
             <div class="col-12 mb-4 mb-md-0">
               <div class="contact-bg text-white p-4 rounded d-flex flex-row align-items-center">
-                <div class="contact-content d-flex flex-row align-items-center w-100">
+                <div id="contactInformation" class="contact-content d-flex flex-row align-items-center w-100">
                   <img
+                  id="mail"
                     src="images/mail.png"
                     alt="Angelica"
                     class="img-fluid rounded-circle w-25"
@@ -640,6 +668,7 @@
                 <li>DeepFace</li>
               </ul>
             </div>
+            
             <div class="skill-category">
               <h5>DevOps</h5>
               <ul>
@@ -663,6 +692,17 @@
               <ul>
                 <li>Tableau</li>
                 <li>Looker Studio</li>
+                <li>Power BI</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h5>Others</h5>
+              <ul>
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SwiftUI</li>
+                <li>Node.js</li>
               </ul>
             </div>
           </div>
